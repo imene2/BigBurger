@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+    <com.burger.bigburger.utils.customviews.ProximaNovaSemiBoldTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:text="@string/quantity_of_product"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <me.angrybyte.numberpicker.view.ActualNumberPicker
+            android:id="@+id/numberPicker"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            app:bar_color="@android:color/darker_gray"
+            app:bar_width="12dp"
+            app:bars_count="4"
+            app:max_value="20"
+            app:min_value="1"
+            app:value="1"
+            app:show_controls="false"
+            app:show_fast_controls="true"
+            app:show_text="true"
+            app:text_color="#047094"
+
+            app:text_size="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"/>
+
+
+    <LinearLayout
+            android:id="@+id/total_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marging20"
+            app:layout_constraintTop_toBottomOf="@+id/numberPicker" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/padding"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp">
+
+        <com.burger.bigburger.utils.customviews.ProximaNovaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total"
+                android:textSize="@dimen/normalTextSize"/>
+
+        <com.burger.bigburger.utils.customviews.ProximaNovaTextView
+                android:id="@+id/totalprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marging10"
+                android:textSize="@dimen/normalTextSize"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/buttonlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/total_layout"
+            android:gravity="end"
+            android:layout_marginTop="@dimen/marging10">
+
+        <com.burger.bigburger.utils.customviews.ProximaNovaSemiBoldTextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding"
+                android:layout_marginEnd="@dimen/padding"
+                android:paddingStart="@dimen/marging20"
+                android:paddingEnd="@dimen/marging20"
+                android:text="@string/cancel"
+                android:textColor="@color/red"/>
+
+        <com.burger.bigburger.utils.customviews.ProximaNovaSemiBoldTextView
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/background_price"
+                android:paddingStart="@dimen/marging20"
+                android:paddingEnd="@dimen/marging20"
+                android:text="@string/add"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"/>
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

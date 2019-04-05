@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Big Burger</string>
+    <string name="products">Products</string>
+    <string name="my_cart">Basket</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+
+    <string name="burger_added">Burger saved to Basket</string>
+    <string name="confirm_delete_product">Are you sure you want to delete this product?</string>
+    <string name="clear_basket">Are you sure you want to clear basket?</string>
+    <string name="clear_basket_title">Clear Basket</string>
+    <string name="quantity_of_product">Quantity of product</string>
+    <string name="add">Add</string>
+    <string name="close">Close</string>
+    <string name="no_internet">Please verify your Internet Connexion</string>
+    <string name="server_error">Internal server error has occur</string>
+    <string name="total">Total :</string>
+    <string name="delete_product">Delete Product</string>
+    <string name="basket_removed">Basket removed</string>
+    <string name="product_removed">Product removed from basket</string>
+</resources>

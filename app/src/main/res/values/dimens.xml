@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="normalTextSize">16sp</dimen>
+    <dimen name="mediumTextSize">20sp</dimen>
+    <dimen name="burgerHeight">170dp</dimen>
+    <dimen name="marging10">10dp</dimen>
+    <dimen name="marging15">15dp</dimen>
+    <dimen name="marging5">5dp</dimen>
+    <dimen name="marging20">20dp</dimen>
+    <dimen name="burgerLargeHeight">200dp</dimen>
+    <dimen name="padding">8dp</dimen>
+    <dimen name="recyclerWidth">0dp</dimen>
+    <dimen name="totalSize">18sp</dimen>
+</resources>
