@@ -23,7 +23,7 @@ class BasketViewModel(application: Application) : AndroidViewModel(application) 
 
 
     init {
-        val burgerDao = BurgerDataBase.getInstance(application, scope).burgerDao()
+        val burgerDao = BurgerDataBase.getInstance(application).burgerDao()
         repository = BurgerRepository(burgerDao)
     }
 

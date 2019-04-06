@@ -19,7 +19,7 @@ public abstract class BurgerDataBase : RoomDatabase() {
         private var instance: BurgerDataBase? = null
 
 
-        fun getInstance(context: Context,scope : CoroutineScope): BurgerDataBase {
+        fun getInstance(context: Context): BurgerDataBase {
 
 
             synchronized(this) {

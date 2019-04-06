@@ -4,16 +4,14 @@ import android.app.Application
 import android.arch.lifecycle.AndroidViewModel
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
-import android.util.Log
 import com.burger.bigburger.data.remote.Burger
 import com.burger.bigburger.data.remote.RetrofitInstance
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
-import io.reactivex.schedulers.Schedulers
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
-    lateinit var disposable: Disposable
 
     val isLoading = MutableLiveData<Boolean>().apply { postValue(true) }
     val isLoadingFailed = MutableLiveData<Boolean>().apply { postValue(false) }
@@ -29,23 +27,25 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
         isLoading.value = true
 
-        disposable = RetrofitInstance.retrofitInstance(this.getApplication())
+        RetrofitInstance.retrofitInstance(this.getApplication())
             .getListBurgers()
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(
-                { burgers ->
+            .enqueue(object : Callback<List<Burger>> {
 
-                    isLoading.value = false
-                    isLoadingFailed.value = false
+                override fun onResponse(call: Call<List<Burger>>, response: Response<List<Burger>>) {
+                    if (response.body() != null) {
 
-                    list.value = burgers
+                        isLoading.value = false
+                        isLoadingFailed.value = false
+                        list.value = response.body()
 
-                },
-                { error ->
+                    }
+                }
+
+                override fun onFailure(call: Call<List<Burger>>, t: Throwable) {
                     isLoading.value = false
                     isLoadingFailed.value = true
-                })
+                }
+            })
 
         return list
     }

@@ -49,7 +49,6 @@ dependencies {
     //retrofit dependencies
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
 
     //Lifecycle component dependencies
     implementation "android.arch.lifecycle:extensions:$arch_component_version"
@@ -59,8 +58,6 @@ dependencies {
     kapt "android.arch.persistence.room:compiler:$arch_component_version"
 
 
-    //rxjava dependency
-    implementation "io.reactivex.rxjava2:rxandroid:$rxjava_version"
 
 
     //Coroutines

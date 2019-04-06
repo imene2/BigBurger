@@ -36,7 +36,7 @@ object AlertUtility {
 
         dialogView.totalprice.text = burger.price.convertCentsToEuro()
 
-        numberPicker.setListener { oldValue, newValue ->
+        numberPicker.setListener { _ , newValue ->
             dialogView.totalprice.text = (newValue * burger.price).convertCentsToEuro()
         }
 
