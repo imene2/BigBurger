@@ -1,8 +1,8 @@
 package com.burger.bigburger.view.burgerslist
 
 import android.content.Context
-import android.support.v4.widget.CircularProgressDrawable
-import android.support.v7.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +15,7 @@ import com.burger.bigburger.viewmodel.basket.BasketViewModel
 import kotlinx.android.synthetic.main.burger_item.view.*
 
 class BurgerAdapter internal constructor(val context: Context, val basketViewModel: BasketViewModel) :
-    RecyclerView.Adapter<BurgerAdapter.BurgerViewHolder>() {
+    androidx.recyclerview.widget.RecyclerView.Adapter<BurgerAdapter.BurgerViewHolder>() {
 
 
     //init items
@@ -41,7 +41,7 @@ class BurgerAdapter internal constructor(val context: Context, val basketViewMod
     }
 
 
-    inner class BurgerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class BurgerViewHolder(itemView: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
 
         fun bind(burger: Burger) = with(itemView) {
 
@@ -49,7 +49,7 @@ class BurgerAdapter internal constructor(val context: Context, val basketViewMod
             itemView.burgerPrice.text = burger.price.convertCentsToEuro()
 
             //progress bar while loading thumbnail
-            val circularProgressDrawable = CircularProgressDrawable(context)
+            val circularProgressDrawable = androidx.swiperefreshlayout.widget.CircularProgressDrawable(context)
             circularProgressDrawable.strokeWidth = 5f
             circularProgressDrawable.centerRadius = 30f
             circularProgressDrawable.start()

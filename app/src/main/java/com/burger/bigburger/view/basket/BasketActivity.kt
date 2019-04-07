@@ -1,10 +1,10 @@
 package com.burger.bigburger.view.basket
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
 import com.burger.bigburger.R
@@ -36,7 +36,7 @@ class BasketActivity : AppCompatActivity() {
         //init adapter
         val adapter = BasketAdapter(this@BasketActivity, basketViewModel)
         //recycler view setup
-        basketRecycler.layoutManager = LinearLayoutManager(this@BasketActivity)
+        basketRecycler.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this@BasketActivity)
         basketRecycler.setHasFixedSize(true)
         basketRecycler.adapter = adapter
 

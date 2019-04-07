@@ -1,7 +1,7 @@
 package com.burger.bigburger.view.basket
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +14,7 @@ import com.burger.bigburger.viewmodel.basket.BasketViewModel
 import kotlinx.android.synthetic.main.basket_item.view.*
 
 class BasketAdapter internal constructor(val context: Context, val basketViewModel: BasketViewModel) :
-    RecyclerView.Adapter<BasketViewHolder>() {
+    androidx.recyclerview.widget.RecyclerView.Adapter<BasketViewHolder>() {
 
 
     //init list of burgers in backet
@@ -40,7 +40,7 @@ class BasketAdapter internal constructor(val context: Context, val basketViewMod
         notifyDataSetChanged()
     }
 
-    inner class BasketViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class BasketViewHolder(itemView: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
 
 
         //bind view

@@ -1,8 +1,8 @@
 package com.burger.bigburger.viewmodel.basket
 
 import android.app.Application
-import android.arch.lifecycle.AndroidViewModel
-import android.arch.lifecycle.LiveData
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
 import com.burger.bigburger.data.local.BurgerDataBase
 import com.burger.bigburger.data.local.BurgerEntity
 import com.burger.bigburger.data.local.BurgerRepository

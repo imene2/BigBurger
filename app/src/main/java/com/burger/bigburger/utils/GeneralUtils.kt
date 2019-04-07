@@ -4,7 +4,7 @@ import android.content.Context
 import android.graphics.Typeface
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
-import android.support.v7.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
 import android.widget.TextView
 import java.text.NumberFormat
 import java.util.*

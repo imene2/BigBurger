@@ -1,7 +1,7 @@
 package com.burger.bigburger.data.local
 
-import android.arch.lifecycle.LiveData
-import android.support.annotation.WorkerThread
+import androidx.lifecycle.LiveData
+import androidx.annotation.WorkerThread
 
 class BurgerRepository(private val burgerDao: BurgerDao) {
 

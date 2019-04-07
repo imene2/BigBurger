@@ -1,11 +1,11 @@
 package com.burger.bigburger.view.burgerslist
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.GridLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         //initialize adapter
         val adapter = BurgerAdapter(this, basketViewModel)
         //setup recyclerview
-        burgersList.layoutManager = GridLayoutManager(this@MainActivity, 2)
+        burgersList.layoutManager = androidx.recyclerview.widget.GridLayoutManager(this@MainActivity, 2)
         burgersList.setHasFixedSize(true)
         //set recyclerview adapter
         burgersList.adapter = adapter
